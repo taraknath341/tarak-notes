@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & SignUp - Tarak Program</title>
+  <link rel="shortcut icon" href="https://taraknath341.codeberg.page/client_storage/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="/auth/login" method="post" id="login" onsubmit="return submitLogin()">
+    <img src="./svg/logo.svg" height="60">
+    <font size="7">Login</font>
+    <br><br>
+    <label for="">
+      <select class="input" required name="countryCode">
+        <option value="1">🇺🇸 +1</option>
+        <option value="44">🇬🇧 +44</option>
+        <option value="61">🇦🇺 +61</option>
+        <option value="91" selected>🇮🇳 +91</option>
+        <option value="971">🇦🇪 +971</option>
+      </select>
+    </label>
+    <br>
+    <label for="">
+      <input type="number" name="whatsappNumber" placeholder="Whatsapp Number" class="input" min="100000000"
+        maxlength="9999999999999" required>
+    </label>
+    <br>
+    <label for="">
+      <input type="password" name="password" placeholder="Password" class="input" required>
+      <button type="button" class="show-password" onclick="showAndHidePassword('login')">👁️</button>
+    </label>
+    <br>
+    <input type="reset" class="btn" value="Reset">
+    <input type="submit" class="btn" value="Submit">
+    <br><br>
+    <a onclick="{
+      form[0].style.display = 'none';
+      form[1].style.display = 'block';
+    }">&MediumSpace; SignUp &MediumSpace;</a>
+  </form>
+  <form action="/auth/signup" method="post" id="signup" style="display: none;" onsubmit="return submitSignup()">
+    <img src="./svg/logo.svg" height="60">
+    <font size="7">SignUp</font>
+    <br><br>
+    <label for="">
+      <select class="input" name="countryCode">
+        <option value="1">🇺🇸 +1</option>
+        <option value="44">🇬🇧 +44</option>
+        <option value="61">🇦🇺 +61</option>
+        <option value="91" selected>🇮🇳 +91</option>
+        <option value="971">🇦🇪 +971</option>
+      </select>
+    </label>
+    <br>
+    <label for="">
+      <input type="number" placeholder="Whatsapp Number" class="input" name="whatsappNumber">
+    </label>
+    <br>
+    <label for="">
+      <input type="password" placeholder="New Password" class="input" name="password" required>
+      <button type="button" class="show-password" onclick="showAndHidePassword('signup')">👁️</button>
+    </label>
+    <br>
+    <input type="reset" class="btn" value="Reset">
+    <input type="submit" class="btn" value="Submit">
+    <br><br>
+    <a onclick="{
+      form[0].style.display = 'block';
+      form[1].style.display = 'none';
+    }">&MediumSpace; Login &MediumSpace;</a>
+  </form>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

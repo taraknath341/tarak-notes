@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & SignUp - Tarak Program</title>
+  <link rel="shortcut icon" href="https://taraknath341.codeberg.page/client_storage/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="/auth/create-user" method="post">
+    <img src="./svg/logo.svg" height="60">
+    <font size="7">SignUp</font>
+    <br><br>
+    <label for="">
+      <input type="number" placeholder="Enter Your OTP" class="input" name="otp" required>
+      <input type="hidden" name="whatsappNumber">
+      <input type="hidden" name="countryCode">
+    </label>
+    <br>
+    <input type="submit" class="btn" value="Submit">
+    <br><br>
+    <a href="/">&MediumSpace; Back &MediumSpace;</a>
+  </form>
+  <script src="js/otp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+* {
+  transition: .5s;
+  font-family: sans-serif
+}
+
+body {
+  margin: 0px;
+  background-color: lightslategray;
+  background-image: url(svg/company_name.svg);
+  background-size: contain;
+}
+
+img {
+  border-radius: 2pc 2pc 0 2pc;
+}
+
+form {
+  color: #fff;
+  width: 30pc;
+  background-color: gray;
+  height: 100vh;
+  text-align: center;
+  align-content: center;
+}
+
+label {
+  position: relative;
+  display: block;
+}
+
+.show-password {
+  padding: 0;
+  margin: auto;
+  font-size: 1.5pc;
+  height: 2.5pc;
+  width: 2.5pc;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 6pc;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5pc;
+}
+
+form .input,
+form .btn {
+  outline: 1px solid black;
+  outline-offset: .5pc;
+  font-size: 1.5pc;
+  height: 3pc;
+  margin: .5pc;
+  background-color: #fff;
+  border-radius: 1pc;
+  border-style: none;
+  text-align: center;
+}
+
+form .input {
+  width: 80%;
+  max-width: 20pc;
+}
+
+form .btn {
+  margin: .5pc 1pc;
+  padding: .7pc 1.2pc;
+}
+
+form a {
+  text-decoration: none;
+  margin: .5pc;
+  padding: .2pc;
+  color: white;
+  font-size: 1.5pc;
+  border: 2px solid white;
+  border-radius: 5pc;
+}
+
+/* Mobile Design */
+@media (max-width: 450px) {
+  form {
+    width: 100%;
+  }
+
+  .show-password {
+    right: 3.5pc;
+  }
+}
