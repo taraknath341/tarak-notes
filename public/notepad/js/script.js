@@ -26,9 +26,9 @@ $(".sidebar").onclick = async e => {
     $(".editor-input").removeAttribute("disabled");
     noteItemFocus(e);
     await previewContent(e.target.innerText);
-  } else if (e.target.innerText === "Reload") {
+  } else if (e.target.className === "reload") {
     await previewTitle();
-  } else if (e.target.innerText === "New Note") {
+  } else if (e.target.className === "newNote") {
     if (window.innerHeight > window.innerWidth) {
       showAndHideSidebar();
     }

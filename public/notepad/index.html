@@ -5,8 +5,9 @@
   <meta name="author" content="Taraknath Karan">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="shortcut icon" href="https://taraknath341.codeberg.page/client_storage/logo.svg" type="image/x-icon">
-  <title>NoteHub - Cloud Notepad</title>
+  <title>Tarak Notes - Tarak Program</title>
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/panal.css">
   <link rel="stylesheet" href="./css/sidebar.css">
@@ -26,17 +27,23 @@
 
   <header class="header">
     <div class="logo">
-      <div class="logo-icon">📝</div>
-      <span>NoteHub</span>
+      <img src="https://taraknath341.codeberg.page/client_storage/logo.svg" class="logo-icon">
+      <span>Tarak Notes</span>
     </div>
 
     <div class="panal-button">
-      <button class="panal-hide-show">🕹️</button>
-      <a href="/auth/logout">
-        <button>➜]</button>
-      </a>
-      <button class="delete">🗑️</button>
-      <button class="save">💾</button>
+      <button class="panal-hide-show" tabler>
+        <!-- 🕹️ -->
+        &#xef37;
+      </button>
+      <button class="delete" tabler>
+        <!-- 🗑️ -->
+        &#xeb41;
+      </button>
+      <button class="save" tabler>
+        <!-- 💾 -->
+        &#xeb62;
+      </button>
     </div>
   </header>
 
@@ -45,8 +52,26 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <button>Reload</button>
-        <button>New Note</button>
+        <button class="reload" tabler>
+          <!-- reload -->
+          &#xf3ae;
+        </button>
+        <button class="newNote" tabler>
+          <!-- New Note -->
+          &#xeaa0;
+        </button>
+        <a href="/auth/logout">
+          <button tabler>
+            <!-- Logout -->
+            &#xfa7e;
+          </button>
+        </a>
+        <a href="https://github.com/taraknath341/tarak-notes">
+          <button tabler>
+            <!-- Github -->
+            &#xec1c;
+          </button>
+        </a>
       </div>
       <div class="sidebar-content">
         <!-- <div class="note-title">Welcome to NoteHub</div> -->

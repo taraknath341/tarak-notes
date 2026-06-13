@@ -17,6 +17,12 @@
   --warning: #ffa500;
 }
 
+[tabler] {
+  font-family: "tabler-icons" !important;
+  font-style: normal;
+  font-weight: 800;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: var(--bg-primary);

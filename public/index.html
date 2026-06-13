@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login & SignUp - Tarak Program</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="shortcut icon" href="https://taraknath341.codeberg.page/client_storage/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -31,7 +32,9 @@
     <br>
     <label for="">
       <input type="password" name="password" placeholder="Password" class="input" required>
-      <button type="button" class="show-password" onclick="showAndHidePassword('login')">👁️</button>
+      <button tabler type="button" class="show-password" onclick="showAndHidePassword('login')">
+        &#xea9a;
+      </button>
     </label>
     <br>
     <input type="reset" class="btn" value="Reset">
@@ -62,7 +65,10 @@
     <br>
     <label for="">
       <input type="password" placeholder="New Password" class="input" name="password" required>
-      <button type="button" class="show-password" onclick="showAndHidePassword('signup')">👁️</button>
+      <button tabler type="button" class="show-password" onclick="showAndHidePassword('signup')">
+        <!-- 👁️ -->
+        &#xea9a;
+      </button>
     </label>
     <br>
     <input type="reset" class="btn" value="Reset">

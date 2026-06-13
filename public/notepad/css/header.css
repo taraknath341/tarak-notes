@@ -1,6 +1,6 @@
 .header {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
-  padding: 16px 24px;
+  padding: 8px 12px;
   border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
@@ -24,16 +24,12 @@
 }
 
 .logo-icon {
+  box-shadow: 0 0 .5pc .2px var(--accent-light);
+  border-radius: 5px;
+  margin-left: 5px;
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-  border-radius: 8px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 800;
-  font-size: 18px;
 }
 
 .header-actions {

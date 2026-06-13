@@ -52,13 +52,20 @@
 }
 
 .panal-button button {
-  padding: 3px;
   border: none;
   background-color: transparent;
   color: white;
-  font-size: 1.5pc;
+  font-size: 1.8pc;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  margin: 0 .3pc;
+  margin: 0 .4pc;
+}
+
+.panal-button button:hover {
+  color: var(--accent-light);
+}
+
+.panal-button a {
+  text-decoration: none;
 }
