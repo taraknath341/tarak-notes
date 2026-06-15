@@ -45,9 +45,10 @@ body {
 }
 
 dialog {
-  background-color: #0000008a;
-  height: 15pc;
-  width: 25pc;
+  background-color: #0000008c;
+  backdrop-filter: blur(.2pc);
+  height: 13pc;
+  width: 20pc;
   top: 0;
   left: 0;
   right: 0;
@@ -61,6 +62,10 @@ dialog input {
   font-size: 1.2pc;
   padding: .5pc;
   margin: .5pc;
+}
+
+dialog input[type=text] {
+  width: 15pc;
 }
 
 dialog input:focus {
@@ -104,5 +109,17 @@ dialog .btn {
 
   .toolbar-group {
     padding: 0 4px;
+  }
+}
+
+@media (max-width: 362px) {
+  body {
+    zoom: 85%;
+  }
+}
+
+@media (max-width: 316px) {
+  body {
+    zoom: 75%;
   }
 }

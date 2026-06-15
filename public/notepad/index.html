@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
+  <title>Tarak Notes - Tarak Program</title>
   <meta name="author" content="Taraknath Karan">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="shortcut icon" href="https://taraknath341.codeberg.page/client_storage/logo.svg" type="image/x-icon">
-  <title>Tarak Notes - Tarak Program</title>
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/panal.css">
   <link rel="stylesheet" href="./css/sidebar.css">
@@ -16,14 +16,22 @@
 </head>
 
 <body>
-  <!-- HEADER -->
-  <dialog>
+  <dialog class="give-prompt-ai">
+    <input type="text" placeholder="Enter Prompt">
+    <p style="color: pink"></p>
+
+    <input type="button" class="btn" value="Cancel">
+    <input type="button" class="btn" value="Create">
+  </dialog>
+
+  <dialog class="create-note">
     <input type="text" placeholder="Enter Note Title">
     <p style="color: pink"></p>
 
     <input type="button" class="btn" value="Cancel">
     <input type="button" class="btn" value="Create">
   </dialog>
+  <!-- HEADER -->
 
   <header class="header">
     <div class="logo">
@@ -35,6 +43,10 @@
       <button class="panal-hide-show" tabler>
         <!-- 🕹️ -->
         &#xef37;
+      </button>
+      <button class="AI" tabler>
+        <!-- AI -->
+        &#x1025b;
       </button>
       <button class="delete" tabler>
         <!-- 🗑️ -->
@@ -84,7 +96,7 @@
 
       <!-- TEXT EDITOR -->
       <div class="editor-container">
-        <textarea class="editor-input" placeholder="This is Your Text Editor..." disabled></textarea>
+        <textarea class="editor-input" placeholder="This is Your Text Editor" disabled></textarea>
       </div>
     </section>
   </div>
@@ -92,9 +104,9 @@
     "use strict";
     const $ = (element) => document.querySelector(element);
     const $$ = (element) => document.querySelectorAll(element);
-    const username = "taraknath";
   </script>
   <script src="./js/grafix.js"></script>
+  <script src="./js/events.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

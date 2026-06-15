@@ -30,7 +30,7 @@
 
 .editor-input::placeholder {
   color: var(--text-secondary);
-  font-size: 3pc;
+  font-size: 2pc;
   text-align: center;
 }
 
