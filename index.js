@@ -5,7 +5,6 @@ import notepad from "./notepad.js";
 import isUserAllreadyLogin from "./middleware/isUserAllreadyLogin.js";
 import errorHandle from "./middleware/error-handle.js";
 import error404 from "./middleware/404-error.js";
-import connectDB from "./database/connectDB.js";
 
 const app = express();
 
@@ -29,7 +28,4 @@ app.listen(process.env.PORT, async err => {
 		return;
 	}
 	console.log(`Server is listen on port ${process.env.PORT}`);
-
-	const DB = await connectDB();
-	app.locals.db = DB;
 });
