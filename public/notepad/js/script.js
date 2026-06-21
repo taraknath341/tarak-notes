@@ -18,6 +18,25 @@ const generateNoteWithAi = async (aiPrompt) => {
 	}
 }
 
+const translateNote = async ({ text, targetLang, sourceLang }) => {
+	try {
+		$(".translate").innerHTML = "&#xeca3;";
+		const response = await fetch(`https://translate-api.tarakpro.in?text=${text}&sourceLang=${sourceLang}&targetLang=${targetLang}`);
+		if (!response.ok) {
+			throw "client error: API is not working, res.ok is false"
+		}
+		const { result } = await response.json();
+		$(".translate").innerHTML = "&#xebbe;";
+		$(".editor-input").value = result;
+	} catch (err) {
+		$(".translate").innerHTML = "&#xf14e;";
+		setTimeout(() => {
+			$(".translate").innerHTML = "&#xebbe;";
+		}, 2000)
+		console.log(err);
+	}
+}
+
 const createTitle = async (title, content) => {
 	try {
 		const res = await fetch(`${window.location.origin}/notepad/api`, {

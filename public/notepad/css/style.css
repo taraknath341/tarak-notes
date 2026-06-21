@@ -40,8 +40,8 @@ body {
 .main-content {
   display: flex;
   width: 100%;
-  margin-top: 60px;
-  height: calc(100vh - 60px);
+  margin-top: 50px;
+  height: calc(100vh - 50px);
 }
 
 dialog {
@@ -58,17 +58,20 @@ dialog {
   align-content: center;
 }
 
-dialog input {
+dialog input,
+dialog select {
   font-size: 1.2pc;
   padding: .5pc;
   margin: .5pc;
 }
 
-dialog input[type=text] {
+dialog input[type=text],
+dialog select {
   width: 15pc;
 }
 
-dialog input:focus {
+dialog input:focus,
+dialog select:focus {
   outline: 3px var(--accent) solid;
 }
 
@@ -86,8 +89,8 @@ dialog .btn {
     zoom: 85%;
   } */
 
-  .header {
-    padding: 12px 5px;
+  .header .logo span {
+    display: none;
   }
 
   .main-content {
