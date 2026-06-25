@@ -3,7 +3,7 @@ import { createNoteValidator, deleteNoteValidator, updateNoteValidator } from ".
 class createNoteSchema {
    constructor({ title, content }) {
       createNoteValidator({ title, content });
-      this.title = title;
+      this.title = title.trim();
       this.content = content;
    }
 }
@@ -11,14 +11,14 @@ class createNoteSchema {
 class deleteNoteSchema {
    constructor({ title }) {
       deleteNoteValidator({ title });
-      this.title = title;
+      this.title = title.trim();
    }
 }
 
 class updateNoteSchema {
    constructor({ title, content }) {
       updateNoteValidator({ title, content });
-      this.title = title;
+      this.title = title.trim();
       this.content = content;
    }
 }
