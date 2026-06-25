@@ -79,7 +79,7 @@ $("dialog.create-note").onclick = async e => {
    }
 
    else if (e.target.value === "Create") {
-      const title = $("dialog.create-note input").value;
+      const title = $("dialog.create-note input").value.trim();
       const p = $("dialog.create-note p");
       if (!title) {
          p.innerText = "Plese Input a valid title";
