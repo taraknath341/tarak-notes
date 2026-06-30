@@ -38,6 +38,8 @@ If you find it useful, consider supporting:
 
 - 💳 UPI / Bank Transfer (for Indian users)
 
+<a href="https://taraknath341.codeberg.page/support-us/">Support Now</a>
+
 ## 🤝 Contributing
 
 Contributions are always welcome!  
