@@ -125,7 +125,7 @@ $("dialog.translate-dialog").onclick = e => {
       e.target.parentNode.removeAttribute("open");
    }
 
-   else if (e.target.value === "Create") {
+   else if (e.target.value === "Translate") {
       const sourceLang = $$("dialog.translate-dialog select")[0].value;
       const targetLang = $$("dialog.translate-dialog select")[1].value;
       const text = $(".editor-input").value;
