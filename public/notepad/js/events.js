@@ -1,34 +1,52 @@
 let CurrentTitle = null;
 
 $(".panal-button").onclick = async e => {
-   if (e.target.className === "panal-hide-show") {
-      showAndHideSidebar();
-   }
-
-   else if (e.target.className === "delete") {
-      await deleteTitle(CurrentTitle);
-      if (window.innerHeight > window.innerWidth && isSidebarHide) {
+   switch (e.target.className) {
+      case "panal-hide-show": {
          showAndHideSidebar();
+         break;
       }
-   }
 
-   else if (e.target.className === "save") {
-      const content = $(".editor-input").value;
-      await updateContent(CurrentTitle, content);
-      if (window.innerHeight > window.innerWidth && isSidebarHide) {
-         showAndHideSidebar();
+      case "delete": {
+         await deleteTitle(CurrentTitle);
+         if (window.innerHeight > window.innerWidth && isSidebarHide) {
+            showAndHideSidebar();
+         }
+         break;
       }
-   }
 
-   else if (e.target.className === "AI") {
-      if (CurrentTitle == null) {
-         $(".AI").innerHTML = "&#xf9f3;";
-         setTimeout(() => {
-            $(".AI").innerHTML = "&#x1025b;";
-         }, 2000);
-         return;
+      case "save": {
+         const content = $(".editor-input").value;
+         await updateContent(CurrentTitle, content);
+         if (window.innerHeight > window.innerWidth && isSidebarHide) {
+            showAndHideSidebar();
+         }
+         break;
       }
-      $("dialog.give-prompt-ai").setAttribute("open", "");
+
+      case "AI": {
+         if (CurrentTitle == null) {
+            $(".AI").innerHTML = "&#xf9f3;";
+            setTimeout(() => {
+               $(".AI").innerHTML = "&#x1025b;";
+            }, 2000);
+            return;
+         }
+         $("dialog.give-prompt-ai").setAttribute("open", "");
+         break;
+      }
+
+      case "translate": {
+         if (CurrentTitle == null) {
+            $(".translate").innerHTML = "&#xf9f3;";
+            setTimeout(() => {
+               $(".translate").innerHTML = "&#xebbe;";
+            }, 2000);
+            return;
+         }
+         $("dialog.translate-dialog").setAttribute("open", "");
+         break;
+      }
    }
 }
 
@@ -61,7 +79,7 @@ $("dialog.create-note").onclick = async e => {
    }
 
    else if (e.target.value === "Create") {
-      const title = $("dialog.create-note input").value;
+      const title = $("dialog.create-note input").value.trim();
       const p = $("dialog.create-note p");
       if (!title) {
          p.innerText = "Plese Input a valid title";
@@ -95,6 +113,23 @@ $("dialog.give-prompt-ai").onclick = async e => {
       p.innerText = "";
       generateNoteWithAi(aiPrompt);
       $("dialog.give-prompt-ai input").value = "";
+      e.target.parentNode.removeAttribute("open");
+   }
+}
+
+$("dialog.translate-dialog").onclick = e => {
+   if (e.target.value === "Cancel") {
+      if (window.innerHeight > window.innerWidth && isSidebarHide) {
+         showAndHideSidebar();
+      }
+      e.target.parentNode.removeAttribute("open");
+   }
+
+   else if (e.target.value === "Translate") {
+      const sourceLang = $$("dialog.translate-dialog select")[0].value;
+      const targetLang = $$("dialog.translate-dialog select")[1].value;
+      const text = $(".editor-input").value;
+      translateNote({ text, targetLang, sourceLang });
       e.target.parentNode.removeAttribute("open");
    }
 }

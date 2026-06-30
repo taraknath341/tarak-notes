@@ -2,6 +2,7 @@ import { createNoteValidator, deleteNoteValidator, updateNoteValidator } from ".
 
 class createNoteSchema {
    constructor({ title, content }) {
+      title = title.trim();
       createNoteValidator({ title, content });
       this.title = title;
       this.content = content;
@@ -10,6 +11,7 @@ class createNoteSchema {
 
 class deleteNoteSchema {
    constructor({ title }) {
+      title = title.trim();
       deleteNoteValidator({ title });
       this.title = title;
    }
@@ -17,6 +19,7 @@ class deleteNoteSchema {
 
 class updateNoteSchema {
    constructor({ title, content }) {
+      title = title.trim();
       updateNoteValidator({ title, content });
       this.title = title;
       this.content = content;

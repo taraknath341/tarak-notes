@@ -7,13 +7,16 @@ const loginControll = async (req, res) => {
    await loginService({ whatsappNumber, countryCode, password });
    const token = jwt.sign(
       { whatsappNumber, countryCode },
-      process.env.JWT_KEY
+      process.env.JWT_KEY, {
+      expiresIn: "90d" // 90 days
+   }
    );
 
    res.cookie("token", token, {
       httpOnly: true,
       sameSite: "strict",
-      signed: true
+      signed: true,
+      maxAge: 1000 * 60 * 60 * 24 * 90 // 90 days
    });
    res.redirect("/");
 }
@@ -29,13 +32,17 @@ const createUserControll = async (req, res) => {
    await createUserService({ whatsappNumber, countryCode, otp });
    const token = jwt.sign(
       { whatsappNumber, countryCode },
-      process.env.JWT_KEY
+      process.env.JWT_KEY,
+      {
+         expiresIn: "90d" // 90 days
+      }
    );
 
    res.cookie("token", token, {
       httpOnly: true,
       sameSite: "strict",
-      signed: true
+      signed: true,
+      maxAge: 1000 * 60 * 60 * 24 * 90 // 90 days
    });
    res.redirect("/");
 }

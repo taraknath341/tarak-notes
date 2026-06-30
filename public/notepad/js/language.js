@@ -1,0 +1,54 @@
+const languageHTML =
+   /* html */ `
+   <option value="ar">Arabic</option>
+   <option value="bn">Bengali</option>
+   <option value="zh">Chinese</option>
+   <option value="zh-CN">Chinese (Simplified)</option>
+   <option value="zh-TW">Chinese (Traditional)</option>
+   <option value="cs">Czech</option>
+   <option value="da">Danish</option>
+   <option value="nl">Dutch</option>
+   <option value="en" selected>English</option>
+   <option value="en-GB">English (United Kingdom)</option>
+   <option value="en-US">English (United States)</option>
+   <option value="tl">Filipino (Tagalog)</option>
+   <option value="fi">Finnish</option>
+   <option value="fr">French</option>
+   <option value="de">German</option>
+   <option value="el">Greek</option>
+   <option value="gu">Gujarati</option>
+   <option value="hi">Hindi</option>
+   <option value="hu">Hungarian</option>
+   <option value="id">Indonesian</option>
+   <option value="it">Italian</option>
+   <option value="ja">Japanese</option>
+   <option value="kn">Kannada</option>
+   <option value="ko">Korean</option>
+   <option value="ms">Malay</option>
+   <option value="ml">Malayalam</option>
+   <option value="mr">Marathi</option>
+   <option value="ne">Nepali</option>
+   <option value="no">Norwegian</option>
+   <option value="fa">Persian (Farsi)</option>
+   <option value="pl">Polish</option>
+   <option value="pt">Portuguese</option>
+   <option value="pt-BR">Portuguese (Brazil)</option>
+   <option value="pt-PT">Portuguese (Portugal)</option>
+   <option value="pa">Punjabi</option>
+   <option value="ro">Romanian</option>
+   <option value="ru">Russian</option>
+   <option value="si">Sinhala</option>
+   <option value="es">Spanish</option>
+   <option value="sv">Swedish</option>
+   <option value="ta">Tamil</option>
+   <option value="te">Telugu</option>
+   <option value="th">Thai</option>
+   <option value="tr">Turkish</option>
+   <option value="uk">Ukrainian</option>
+   <option value="ur">Urdu</option>
+   <option value="vi">Vietnamese</option>
+`;
+
+$$("dialog.translate-dialog select").forEach(iv => {
+   iv.innerHTML = languageHTML;
+});
